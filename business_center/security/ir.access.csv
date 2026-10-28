@@ -1,0 +1,20 @@
+id,name,model_id,group_id/id,operation,domain
+access_bc_center_manager,bc.center.manager,business.center,business_center.group_bc_manager,crud,
+access_bc_center_user,bc.center.user,business.center,business_center.group_bc_user,r,
+access_bc_floor_manager,bc.floor.manager,business.center.floor,business_center.group_bc_manager,crud,
+access_bc_floor_user,bc.floor.user,business.center.floor,business_center.group_bc_user,r,
+access_bc_space_manager,bc.space.manager,business.center.space,business_center.group_bc_manager,crud,
+access_bc_space_user,bc.space.user,business.center.space,business_center.group_bc_user,r,
+access_bc_desk_manager,bc.desk.manager,business.center.desk,business_center.group_bc_manager,crud,
+access_bc_desk_user,bc.desk.user,business.center.desk,business_center.group_bc_user,r,
+access_bc_amenity_manager,bc.amenity.manager,business.center.amenity,business_center.group_bc_manager,crud,
+access_bc_amenity_user,bc.amenity.user,business.center.amenity,business_center.group_bc_user,r,
+access_bc_contract_manager,bc.contract.manager,business.center.contract,business_center.group_bc_manager,crud,
+access_bc_contract_user,bc.contract.user,business.center.contract,business_center.group_bc_user,cru,
+rule_bc_contract_company,Contract: multi-company,business.center.contract,,crud,"['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]"
+access_bc_leased_asset_user,bc.leased.asset.user,business.center.leased.asset,business_center.group_bc_user,crud,
+access_bc_charge_manager,bc.charge.manager,business.center.contract.charge,business_center.group_bc_manager,crud,
+access_bc_charge_user,bc.charge.user,business.center.contract.charge,business_center.group_bc_user,r,
+access_bc_booking_manager,bc.booking.manager,business.center.booking,business_center.group_bc_manager,crud,
+access_bc_booking_user,bc.booking.user,business.center.booking,business_center.group_bc_user,cru,
+rule_bc_booking_company,Booking: multi-company,business.center.booking,,crud,"['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]"

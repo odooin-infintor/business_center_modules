@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <!--
+        Cards of the /my home page. Which tenant role sees which card is
+        decided in controllers/portal.py, so these records stay plain data.
+    -->
+
+    <!-- Tenant Corporate Admin only -->
+    <record id="portal_entry_contracts" model="portal.entry">
+        <field name="name">Contracts</field>
+        <field name="description">Follow your business center contracts</field>
+        <field name="url">/my/contracts</field>
+        <field name="image" type="bytes" file="portal/static/src/img/portal-addresses.svg"/>
+        <field name="placeholder_count">contract_count</field>
+        <field name="sequence" eval="10"/>
+    </record>
+
+    <!-- Tenant Employee (and so Tenant Corporate Admin) -->
+    <record id="portal_entry_bookings" model="portal.entry">
+        <field name="name">Bookings</field>
+        <field name="description">View your active and past bookings</field>
+        <field name="url">/my/bookings</field>
+        <field name="image" type="bytes" file="portal/static/src/img/portal-addresses.svg"/>
+        <field name="is_config_card" eval="True"/>
+        <field name="sequence" eval="20"/>
+    </record>
+
+    <!-- Tenant Corporate Admin only -->
+    <record id="portal_entry_invoice_history" model="portal.entry">
+        <field name="name">Invoice History</field>
+        <field name="description">View and download your company's invoices</field>
+        <field name="url">/my/invoices</field>
+        <field name="image" type="bytes" file="account/static/src/img/bill.svg"/>
+        <field name="placeholder_count">invoice_count</field>
+        <field name="sequence" eval="30"/>
+    </record>
+
+</odoo>

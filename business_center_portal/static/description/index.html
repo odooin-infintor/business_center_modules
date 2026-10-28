@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Business Center Portal</title>
+      <!-- Font Awesome CDN for Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+   </head>
+   <body>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+      <div class="main-body" style="font-family: Arial, sans-serif; background-color: #f9fbff; padding: 0 12px;">
+
+      <!-- ================= HERO ================= -->
+      <section class="container">
+         <div class="position-relative pt-5 pb-4">
+            <div class="row position-relative justify-content-center">
+               <h1 class="mb-2 col-12" style="font-weight:700; font-size: clamp(30px, 6vw, 50px); line-height: 1.2; text-align:center; color:#171618">
+                  <span style="color:#be5fa5">Business Center </span>Tenant Portal for Odoo
+               </h1>
+               <p style="text-align:center; font-weight:400; font-size:16px; line-height:25px; color:#171618" class="mb-4 col-lg-10 col-12">
+                  Business Center Portal gives the tenants of your business centre or co-working space their own self-service area at <b>/my</b>.
+                  Tenants book and cancel meeting rooms, follow their contracts and download their invoices &mdash; without emailing the front desk.
+                  Every page reads the same contracts, bookings and invoices your staff work with in the back office, so nothing has to be re-keyed or reconciled.
+               </p>
+            </div>
+         </div>
+      </section>
+
+      <!-- ================= IMPORTANT NOTE ================= -->
+      <section class="container pb-4">
+         <div style="max-width: 900px; margin: 0 auto; padding: 20px 24px; border-radius: 15px; background-color: #fff4e5; border-left: 6px solid #e8890c; color: #5c3d00; font-size: 17px; line-height: 26px; text-align: left;">
+            <h4 style="color: #b35f00; font-weight: 700; font-size: 22px; margin-bottom: 10px;"><i class="fas fa-exclamation-triangle"></i> Important Note</h4>
+            <p class="mb-2">
+               This module <b>does not work without the Business Center app</b> (<code>business_center</code>).
+               It is an add-on that adds the tenant portal on top of the Business Center back office: contracts, spaces, desks,
+               meeting rooms and bookings all come from that app.
+            </p>
+            <p class="mb-0">
+               Please install the <b>Business Center</b> app first. Business Center Portal then installs automatically alongside it,
+               or can be installed from the Apps menu. Uninstalling this module returns the database to back office only, with no leftovers.
+            </p>
+         </div>
+      </section>
+
+      <!-- ================= KEY FEATURES ================= -->
+      <section class="container">
+         <div class="container features-highlight text-center pt-4">
+            <div class="row my-3 py-2" style="justify-content:center">
+               <h2 class="pt-4 mb-2 col-12" style="font-size: clamp(26px, 4.5vw, 38px);font-weight:700;line-height: 1.2;text-align:center;color:#171618">
+                  <span style="color:#be5fa5">Key Features </span>of Business Center Portal
+               </h2>
+               <div class="col-12 col-lg-6 feature-item p-1">
+                  <div class="box d-flex flex-column flex-sm-row align-items-center align-items-sm-start h-100" style="padding: 24px;border-radius: 15px;background-color: #c1e0ed36;">
+                     <img class="img img-responsive mx-3 my-3 flex-shrink-0" alt="not found" width="55" height="55" src="./images/direction.png">
+                     <div class="box-in" style="text-align: left;">
+                        <h5 style="color: #593987;font-size: clamp(19px, 3vw, 24px);letter-spacing: -.4px;">Self-Service Meeting Room Booking</h5>
+                        <p style="margin: 0px;text-align: left;">Tenants pick a room and date, see free and busy slots on a live availability strip, and book against the contract they are named on. Other tenants' bookings show only as &ldquo;Booked&rdquo;, never with their reference.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-lg-6 feature-item p-1">
+                  <div class="box d-flex flex-column flex-sm-row align-items-center align-items-sm-start h-100" style="padding: 24px;border-radius: 15px;background-color: #c1e0ed36;">
+                     <img class="img img-responsive mx-3 my-3 flex-shrink-0" alt="not found" width="55" height="55" src="./images/schedule.png">
+                     <div class="box-in" style="text-align: left;">
+                        <h5 style="color: #593987;font-size: clamp(19px, 3vw, 24px);letter-spacing: -.4px;">Same Booking Rules as the Back Office</h5>
+                        <p style="margin: 0px;text-align: left;">No past-dated bookings, no cancellation once a session has started, and times compared in the business centre's timezone. An extra charge already on an invoice can only be reversed by the centre.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-lg-6 feature-item p-1">
+                  <div class="box d-flex flex-column flex-sm-row align-items-center align-items-sm-start h-100" style="padding: 24px;border-radius: 15px;background-color: #c1e0ed36;">
+                     <img class="img img-responsive mx-3 my-3 flex-shrink-0" alt="not found" width="55" height="55" src="./images/booking.png">
+                     <div class="box-in" style="text-align: left;">
+                        <h5 style="color: #593987;font-size: clamp(19px, 3vw, 24px);letter-spacing: -.4px;">Contracts at a Glance</h5>
+                        <p style="margin: 0px;text-align: left;">Tenant corporate admins see their company's contracts, the offices and desks they lease and the contract dates &mdash; read-only, always in step with the back office.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-lg-6 feature-item p-1">
+                  <div class="box d-flex flex-column flex-sm-row align-items-center align-items-sm-start h-100" style="padding: 24px;border-radius: 15px;background-color: #c1e0ed36;">
+                     <img class="img img-responsive mx-3 my-3 flex-shrink-0" alt="not found" width="55" height="55" src="./images/cloud-server.png">
+                     <div class="box-in" style="text-align: left;">
+                        <h5 style="color: #593987;font-size: clamp(19px, 3vw, 24px);letter-spacing: -.4px;">Invoice History &amp; Online Payment</h5>
+                        <p style="margin: 0px;text-align: left;">Corporate admins view and download their company's posted invoices and credit notes, and pay online with Pay Now once a payment provider is enabled.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-lg-6 feature-item p-1">
+                  <div class="box d-flex flex-column flex-sm-row align-items-center align-items-sm-start h-100" style="padding: 24px;border-radius: 15px;background-color: #c1e0ed36;">
+                     <img class="img img-responsive mx-3 my-3 flex-shrink-0" alt="not found" width="55" height="55" src="./images/user.png">
+                     <div class="box-in" style="text-align: left;">
+                        <h5 style="color: #593987;font-size: clamp(19px, 3vw, 24px);letter-spacing: -.4px;">Two Tenant Roles</h5>
+                        <p style="margin: 0px;text-align: left;">Tenant Employee and Tenant Corporate Admin, set on the contact and applied automatically when portal access is granted. A tenant contact granted access without a role gets the least privileged one.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-lg-6 feature-item p-1">
+                  <div class="box d-flex flex-column flex-sm-row align-items-center align-items-sm-start h-100" style="padding: 24px;border-radius: 15px;background-color: #c1e0ed36;">
+                     <img class="img img-responsive mx-3 my-3 flex-shrink-0" alt="not found" width="55" height="55" src="./images/responsive.png">
+                     <div class="box-in" style="text-align: left;">
+                        <h5 style="color: #593987;font-size: clamp(19px, 3vw, 24px);letter-spacing: -.4px;">Strict Tenant Separation</h5>
+                        <p style="margin: 0px;text-align: left;">Each tenant sees only their own company's records, enforced by record rules at the database layer rather than by hiding menus. Portal users without a Business Center role keep Odoo's normal portal.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- ================= ROLES ================= -->
+      <section class="container pt-5">
+         <div class="row pt-4 pb-4 px-2 mx-0" style="background-image: linear-gradient(to right, rgb(191 228 255 / 34%), rgb(198 209 255 / 14%)); border-radius: 30px;">
+            <div class="row_box" style="max-width: 1000px;margin-left: auto;margin-right: auto;justify-content: center;">
+               <div class="row pt-5 pb-5">
+                  <h3 class="pb-3 mb-2 col-12" style="font-size: clamp(20px, 3.5vw, 30px);font-weight:300;line-height: 1.3;text-align:center;color:#674a83">
+                     --- HOW IT WORKS ---
+                  </h3>
+                  <h2 class="mb-2 col-12" style="font-size: clamp(28px, 5vw, 44px);font-weight:700;line-height: 1.2;text-align:center;color:#171618">
+                     <span style="color:#be5fa5">Giving Tenants </span>Portal Access
+                  </h2>
+                  <p style="font-size:18px;text-align:center;color:#5c5f6e">
+                     Set the <b>Business Center Role</b> on the tenant's contact, then open Contacts &rarr; Action &rarr; Grant portal access.<br>
+                     The role is applied as soon as the login is created, and changing it later updates the user's access straight away.
+                  </p>
+                  <div class="table-responsive" style="max-width: 900px; margin: 20px auto 10px auto; border-radius: 12px; box-shadow: 0px 0px 10px 0px #9ec6ba75; background-color: #ffffff;"><table style="width: 100%; font-size: 16px; color: #5c5f6e; margin: 0;">
+                     <tr><th style="background-color: #65488c; color: #ffffff; padding: 12px 16px; text-align: left;">Role</th><th style="background-color: #65488c; color: #ffffff; padding: 12px 16px; text-align: left;">What they can do in the portal</th></tr>
+                     <tr><td style="padding: 12px 16px; text-align: left; border-top: 1px solid #e6e2ee; font-weight: 700; color: #593987; width: 32%;">Tenant Employee</td><td style="padding: 12px 16px; text-align: left; border-top: 1px solid #e6e2ee;">Book meeting rooms against the contracts they are named on, and see and cancel their own bookings. No access to contracts, other people's bookings or invoices.</td></tr>
+                     <tr><td style="padding: 12px 16px; text-align: left; border-top: 1px solid #e6e2ee; font-weight: 700; color: #593987; width: 32%;">Tenant Corporate Admin</td><td style="padding: 12px 16px; text-align: left; border-top: 1px solid #e6e2ee;">Everything an Employee can, plus the company's contracts, all of the company's bookings, and the company's invoice history with download and online payment.</td></tr>
+                  </table></div>
+               </div>
+               <div class="row pt-5 pb-5">
+                  <h3 class="mb-2 col-12" style="font-size: clamp(22px, 4vw, 34px);font-weight:700;line-height: 1.25;text-align:center;color:#171618">
+                     <span style="color:#be5fa5">Corporate Admin </span>Dashboard
+                  </h3>
+                  <p style="font-size:18px;text-align:center;color:#5c5f6e;">A Tenant Corporate Admin lands on My Account with tiles for Contracts, Bookings and Invoice History.</p>
+                  <img class="mt-3 img-fluid" src="./images/portal_dashboard.png" alt="" style="padding: 0px; max-width: 100%; height: auto;box-shadow: 0px 0px 10px 0px #9ec6ba75;"/>
+               </div>
+               <div class="row pt-5 pb-5">
+                  <h3 class="mb-2 col-12" style="font-size: clamp(22px, 4vw, 34px);font-weight:700;line-height: 1.25;text-align:center;color:#171618">
+                     <span style="color:#be5fa5">Employee </span>Dashboard
+                  </h3>
+                  <p style="font-size:18px;text-align:center;color:#5c5f6e;">A Tenant Employee sees only the Bookings tile &mdash; contracts and billing stay with the company's admin.</p>
+                  <img class="mt-3 img-fluid" src="./images/portal_tenant_dashboard.png" alt="" style="padding: 0px; max-width: 100%; height: auto;box-shadow: 0px 0px 10px 0px #9ec6ba75;"/>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- ================= BOOKINGS ================= -->
+      <section class="container pt-5">
+         <div class="row pt-4 pb-4 px-2 mx-0" style="background-image: linear-gradient(to right, rgb(191 228 255 / 34%), rgb(198 209 255 / 14%)); border-radius: 30px;">
+            <div class="row_box" style="max-width: 1000px;margin-left: auto;margin-right: auto;justify-content: center;">
+               <div class="row pt-5 pb-5">
+                  <h2 class="mb-2 col-12" style="font-size: clamp(28px, 5vw, 44px);font-weight:700;line-height: 1.2;text-align:center;color:#171618">
+                     <span style="color:#be5fa5">Meeting Room </span>Bookings
+                  </h2>
+                  <p style="font-size:18px;text-align:center;color:#5c5f6e;">The Bookings page lists active and past reservations with their room, date, time and status.<br>
+                  Employees see their own bookings; corporate admins see every booking made by their company.</p>
+                  <img class="mt-3 img-fluid" src="./images/portal_booking_list_view.png" alt="" style="padding: 0px; max-width: 100%; height: auto;box-shadow: 0px 0px 10px 0px #9ec6ba75;"/>
+               </div>
+               <div class="row pt-5 pb-5">
+                  <h3 class="mb-2 col-12" style="font-size: clamp(22px, 4vw, 34px);font-weight:700;line-height: 1.25;text-align:center;color:#171618">
+                     <span style="color:#be5fa5">New </span>Booking
+                  </h3>
+                  <p style="font-size:18px;text-align:center;color:#5c5f6e;">Choose the contract, meeting room and date. The availability strip shows the room's free and busy blocks for the day, so a tenant picks a time that is actually open.<br>
+                  Before confirming, the tenant sees the remaining free meeting-room hours and the cost summary for anything beyond them.</p>
+                  <img class="mt-3 img-fluid" src="./images/portal_booking_form_view_01.png" alt="" style="padding: 0px; max-width: 100%; height: auto;box-shadow: 0px 0px 10px 0px #9ec6ba75;"/>
+                  <img class="mt-3 img-fluid" src="./images/portal_booking_form_view_02.png" alt="" style="padding: 0px; max-width: 100%; height: auto;box-shadow: 0px 0px 10px 0px #9ec6ba75;"/>
+               </div>
+               <div class="row pt-5 pb-5">
+                  <h3 class="mb-2 col-12" style="font-size: clamp(22px, 4vw, 34px);font-weight:700;line-height: 1.25;text-align:center;color:#171618">
+                     <span style="color:#be5fa5">Cancelling </span>a Booking
+                  </h3>
+                  <p style="font-size:18px;text-align:center;color:#5c5f6e;">Upcoming bookings can be cancelled from the portal until the session starts. Once it has started, or once its extra charge is invoiced, only the business centre can reverse it.</p>
+                  <img class="mt-3 img-fluid" src="./images/portal_booking_cancel.png" alt="" style="padding: 0px; max-width: 100%; height: auto;box-shadow: 0px 0px 10px 0px #9ec6ba75;"/>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- ================= CONFIGURATION ================= -->
+      <section class="container pt-5">
+         <div class="row pt-4 pb-4 px-2 mx-0" style="background-image: linear-gradient(to right, rgb(191 228 255 / 34%), rgb(198 209 255 / 14%)); border-radius: 30px;">
+            <div class="row_box" style="max-width: 1000px;margin-left: auto;margin-right: auto;justify-content: center;">
+               <div class="row pt-5 pb-5">
+                  <h2 class="mb-2 col-12" style="font-size: clamp(28px, 5vw, 44px);font-weight:700;line-height: 1.2;text-align:center;color:#171618">
+                     <span style="color:#be5fa5">Setup </span>Checklist
+                  </h2>
+                  <div class="table-responsive" style="max-width: 900px; margin: 20px auto 10px auto; border-radius: 12px; box-shadow: 0px 0px 10px 0px #9ec6ba75; background-color: #ffffff;"><table style="width: 100%; font-size: 16px; color: #5c5f6e; margin: 0;">
+                     <tr><th style="background-color: #65488c; color: #ffffff; padding: 12px 16px; text-align: left;">Step</th><th style="background-color: #65488c; color: #ffffff; padding: 12px 16px; text-align: left;">Where</th></tr>
+                     <tr><td style="padding: 12px 16px; text-align: left; border-top: 1px solid #e6e2ee; font-weight: 700; color: #593987; width: 32%;">1. Install Business Center</td><td style="padding: 12px 16px; text-align: left; border-top: 1px solid #e6e2ee;">Apps &rarr; Business Center. Required &mdash; this portal does not work without it.</td></tr>
+                     <tr><td style="padding: 12px 16px; text-align: left; border-top: 1px solid #e6e2ee; font-weight: 700; color: #593987; width: 32%;">2. Set the timezone</td><td style="padding: 12px 16px; text-align: left; border-top: 1px solid #e6e2ee;">Business Center &rarr; Configuration &rarr; Settings. Booking times are checked in this timezone.</td></tr>
+                     <tr><td style="padding: 12px 16px; text-align: left; border-top: 1px solid #e6e2ee; font-weight: 700; color: #593987; width: 32%;">3. Assign roles</td><td style="padding: 12px 16px; text-align: left; border-top: 1px solid #e6e2ee;">Open the tenant's contact and set Business Center Role to Tenant Employee or Tenant Corporate Admin.</td></tr>
+                     <tr><td style="padding: 12px 16px; text-align: left; border-top: 1px solid #e6e2ee; font-weight: 700; color: #593987; width: 32%;">4. Grant portal access</td><td style="padding: 12px 16px; text-align: left; border-top: 1px solid #e6e2ee;">Contacts &rarr; Action &rarr; Grant portal access.</td></tr>
+                     <tr><td style="padding: 12px 16px; text-align: left; border-top: 1px solid #e6e2ee; font-weight: 700; color: #593987; width: 32%;">5. Enable online payment (optional)</td><td style="padding: 12px 16px; text-align: left; border-top: 1px solid #e6e2ee;">Invoicing &rarr; Configuration &rarr; Payment Providers &mdash; an online provider, or Wire Transfer with your bank details, to show Pay Now on invoices.</td></tr>
+                  </table></div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- ================= SERVICES ================= -->
+      <div class="container services-section text-center py-5 my-5">
+         <h3>Our Services</h3>
+         <div class="services-container row my-3 py-2" style="justify-content: center">
+            <div class="row">
+               <div class="col-12 col-sm-6 col-lg-3 feature-item p-1">
+                  <div class="box h-100" style="padding:15px; background-color:#f9fcfd;">
+                     <img class="img img-responsive mx-3 my-3 flex-shrink-0" alt="not found" width="55" height="55" src="./images/custom.png">
+                     <h4>Odoo Implementation</h4>
+                     <p>End-to-end Odoo implementation to meet your business needs.</p>
+                  </div>
+               </div>
+               <div class="col-12 col-sm-6 col-lg-3 feature-item p-1">
+                  <div class="box h-100" style="padding:15px; background-color:#f9fcfd;">
+                     <img class="img img-responsive mx-3 my-3 flex-shrink-0" alt="not found" width="55" height="55" src="./images/implementation.png">
+                     <h4>Odoo Customization</h4>
+                     <p>Custom solutions tailored to your unique requirements.</p>
+                  </div>
+               </div>
+               <div class="col-12 col-sm-6 col-lg-3 feature-item p-1">
+                  <div class="box h-100" style="padding:15px; background-color:#f9fcfd;">
+                     <img class="img img-responsive mx-3 my-3 flex-shrink-0" alt="not found" width="55" height="55" src="./images/customer-service.png">
+                     <h4>Odoo Support &amp; Training</h4>
+                     <p>Comprehensive support and training to enhance your Odoo usage.</p>
+                  </div>
+               </div>
+               <div class="col-12 col-sm-6 col-lg-3 feature-item p-1">
+                  <div class="box h-100" style="padding:15px; background-color:#f9fcfd;">
+                     <img class="img img-responsive mx-3 my-3 flex-shrink-0" alt="not found" width="55" height="55" src="./images/hired.png">
+                     <h4>Hire an Odoo Developer</h4>
+                     <p>Get access to skilled Odoo developers for your project needs.</p>
+                  </div>
+               </div>
+               <div class="col-12 col-sm-6 col-lg-3 feature-item p-1">
+                  <div class="box h-100" style="padding:15px; background-color:#f9fcfd;">
+                     <img class="img img-responsive mx-3 my-3 flex-shrink-0" alt="not found" width="55" height="55" src="./images/technology.png">
+                     <h4>Odoo Integration</h4>
+                     <p>Integrate Odoo seamlessly with third-party apps and systems.</p>
+                  </div>
+               </div>
+               <div class="col-12 col-sm-6 col-lg-3 feature-item p-1">
+                  <div class="box h-100" style="padding:15px; background-color:#f9fcfd;">
+                     <img class="img img-responsive mx-3 my-3 flex-shrink-0" alt="not found" width="55" height="55" src="./images/cloud-server.png">
+                     <h4>Odoo Hosting &amp; Cloud</h4>
+                     <p>Secure and scalable Odoo hosting solutions.</p>
+                  </div>
+               </div>
+               <div class="col-12 col-sm-6 col-lg-3 feature-item p-1">
+                  <div class="box h-100" style="padding:15px; background-color:#f9fcfd;">
+                     <img class="img img-responsive mx-3 my-3 flex-shrink-0" alt="not found" width="55" height="55" src="./images/schedule.png">
+                     <h4>Odoo Maintenance</h4>
+                     <p>Ensure smooth and uninterrupted operations.</p>
+                  </div>
+               </div>
+               <div class="col-12 col-sm-6 col-lg-3 feature-item p-1">
+                  <div class="box h-100" style="padding:15px; background-color:#f9fcfd;">
+                     <img class="img img-responsive mx-3 my-3 flex-shrink-0" alt="not found" width="55" height="55" src="./images/consultant.png">
+                     <h4>Odoo Consulting</h4>
+                     <p>Expert consulting to help you leverage Odoo for maximum efficiency.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="support-section support-section text-center pb-5">
+         <h3>Support &amp; Demo</h3>
+         <div class="support-content" style="display: block; text-align: center; padding: 0 8px;">
+            <div class="support-item" style="padding:10px 30px; margin:2px; background-color: #f9fcfd; width: 100%; max-width: 500px; margin-left: auto !important; margin-right: auto !important;">
+               <i class="fas fa-shield-alt"></i>
+               <span>90 Days Free Support Available</span>
+            </div>
+            <div class="support-item" style="padding: 10px 30px; margin: 2px; background-color: #f9fcfd; width: 100%; max-width: 500px; margin-left: auto !important; margin-right: auto !important;">
+               <i class="fas fa-ticket-alt"></i>
+               <span>Create a support ticket <a href="https://people.infintor.com/contactus" target="_blank">people.infintor.com/contactus</a> </span>
+            </div>
+            <div class="support-item" style="padding: 10px 30px; margin: 2px; background-color: #f9fcfd; width: 100%; max-width: 500px; margin-left: auto !important; margin-right: auto !important;">
+               <i class="fas fa-envelope"></i>
+               <span>Send an email to <a href="mailto:odoo@infintor.com">odoo@infintor.com</a></span>
+            </div>
+            <div class="support-item" style="padding: 10px 30px; margin: 2px; background-color: #f9fcfd; width: 100%; max-width: 500px; margin-left: auto !important; margin-right: auto !important;">
+               <i class="fas fa-globe"></i>
+               <span>Visit <a href="https://www.infintor.com" target="_blank">www.infintor.com</a></span>
+            </div>
+         </div>
+      </div>
+      </div>
+   </body>
+</html>

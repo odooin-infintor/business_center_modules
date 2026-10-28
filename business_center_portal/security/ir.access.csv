@@ -1,0 +1,11 @@
+id,name,model_id,group_id/id,operation,domain
+rule_bc_center_tenant,Centre: corporate admin sees own centres,business.center,business_center_portal.group_bc_tenant_admin,r,"[('id', 'in', user.partner_id.commercial_partner_id.bc_center_ids.ids)]"
+rule_bc_floor_tenant,Floor: corporate admin sees own centres' floors,business.center.floor,business_center_portal.group_bc_tenant_admin,r,"[('center_id', 'in', user.partner_id.commercial_partner_id.bc_center_ids.ids)]"
+rule_bc_space_tenant,Space: meeting rooms plus own offices,business.center.space,business_center_portal.group_bc_tenant_admin,r,"['|', '&', ('space_type', '=', 'meeting_room'), ('center_id', 'in', user.partner_id.commercial_partner_id.bc_center_ids.ids), ('leased_asset_ids.contract_id.partner_id', 'child_of', user.partner_id.commercial_partner_id.id)]"
+rule_bc_desk_tenant,Desk: corporate admin sees own leased desks,business.center.desk,business_center_portal.group_bc_tenant_admin,r,"[('leased_asset_ids.contract_id.partner_id', 'child_of', user.partner_id.commercial_partner_id.id)]"
+access_bc_amenity_tenant,bc.amenity.tenant,business.center.amenity,business_center_portal.group_bc_tenant_admin,r,
+rule_bc_contract_tenant_admin,Contract: corporate admin sees own company,business.center.contract,business_center_portal.group_bc_tenant_admin,r,"[('partner_id', 'child_of', user.partner_id.commercial_partner_id.id)]"
+rule_bc_leased_asset_tenant,Leased asset: corporate admin sees own company,business.center.leased.asset,business_center_portal.group_bc_tenant_admin,r,"[('contract_id.partner_id', 'child_of', user.partner_id.commercial_partner_id.id)]"
+rule_bc_charge_tenant,Charge: corporate admin sees own company,business.center.contract.charge,business_center_portal.group_bc_tenant_admin,r,"[('contract_id.partner_id', 'child_of', user.partner_id.commercial_partner_id.id)]"
+rule_bc_booking_employee,Booking: employee sees own only,business.center.booking,business_center_portal.group_bc_tenant_employee,cru,"['&', ('user_id', '=', user.id), ('contract_id.partner_id', 'child_of', user.partner_id.commercial_partner_id.id)]"
+rule_bc_booking_tenant_admin,Booking: corporate admin sees own company,business.center.booking,business_center_portal.group_bc_tenant_admin,cru,"[('contract_id.partner_id', 'child_of', user.partner_id.commercial_partner_id.id)]"

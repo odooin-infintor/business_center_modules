@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--
+        The tenant accesses on business center models live in
+        security/ir.access.csv. Each row there is a permission: a group plus
+        the operations it may perform, limited to the records of its domain.
+        Permissions of different groups are OR'ed, so a Tenant Corporate
+        Admin (who implies Tenant Employee) gets both booking rows, i.e. the
+        whole company's bookings.
+    -->
+
+    <!-- =============================================================
+         INVOICES - read-only, Tenant Corporate Admin only.
+         account already grants every portal user read on their own
+         company's invoices (account.account_invoice_rule_portal, on
+         base.group_portal). Permissions of different groups are OR'ed,
+         so a stricter access of ours cannot take that away. We narrow
+         the stock access in place.
+         ============================================================= -->
+    <!-- account's portal accesses are reset whenever account is updated.
+         The domains live in models/ir_access.py and are written by this
+         call on every install and upgrade of this module, which Odoo also
+         upgrades after account since it depends on it. -->
+    <function model="ir.access" name="_bc_apply_portal_invoice_rules"/>
+
+</odoo>

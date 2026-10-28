@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--
+        The /my home cards (hiding account's invoice cards from tenants and
+        showing our Invoice History card to corporate admins) are handled by
+        data/portal_entry_data.xml and controllers/portal.py.
+    -->
+
+    <!-- BREADCRUMB - "Invoices & Bills" is the wrong wording for a tenant -->
+    <template id="portal_breadcrumb_invoice_bc"
+              name="Portal Breadcrumb: Invoice History"
+              inherit_id="account.portal_my_home_menu_invoice" priority="32">
+        <xpath expr="//li[@name='invoices_breadcrumb']" position="replace">
+            <li name="invoices_breadcrumb" t-if="page_name == 'invoice'"
+                t-attf-class="breadcrumb-item #{'active ' if not invoice else ''}">
+                <a t-if="invoice" t-attf-href="/my/invoices?{{ keep_query() }}">Invoice History</a>
+                <t t-else="">Invoice History</t>
+            </li>
+        </xpath>
+    </template>
+
+</odoo>
