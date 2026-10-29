@@ -7,7 +7,7 @@
     'version': '20.0.1.0.0',
     'category': 'Generic Modules',
     'sequence': 10,
-    'price': 5,
+    'price': 0.50,
     'currency': 'USD',
     'author': 'Infintor Solutions',
     'summary': 'Access coworking spaces, desks, and bookings through the member portal',
