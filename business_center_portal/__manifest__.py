@@ -3,7 +3,7 @@
 
 
 {
-    'name': 'BUSINESS CENTER PORTAL',
+    'name': 'Coworking Space & Business Center Tenant Portal',
     'version': '20.0.1.0.0',
     'category': 'Generic Modules',
     'sequence': 10,
